@@ -30,6 +30,17 @@ password321
 The providers that are supported to be texted by using this system are listed below.
 
 Happy March Madness!
+## Running the program
+Open up command prompt or terminal, then you must navigate to the correct folder the python
+file 'Main.py' is located at. If you are not sure on how to do this, then check out the tutorial
+at http://modulesunraveled.com/command-line-beginners/moving-and-out-directories-cd-command.
+Once navigated to the correct folder in which the python file 'Main.py' is located, then type
+
+```
+python Main.py
+```
+
+to start the program. Voila!
 ## Providers supported
 ##### AT&T
 Carrier: att
