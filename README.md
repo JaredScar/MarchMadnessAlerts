@@ -1,5 +1,5 @@
 # March Madness Alerts (SMS)
-![![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheWolfBadger/MarchMadnessAlerts/blob/master/LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/TheWolfBadger/MarchMadnessAlerts/blob/master/LICENSE)
 Don't miss a beat with the March Madness Alerts system! This system informs you of all
 games that come down to the wire. If a game is within 8 points under the 4 minute mark
 in the 2nd half, then you will get a text message of the game's score and how much time
