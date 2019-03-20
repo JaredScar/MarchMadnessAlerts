@@ -1,0 +1,4 @@
+myEmail@gmail.com
+myGmailPassword
+
+phoneNumberWithAreaCodeAndNoSeparation:Carrier

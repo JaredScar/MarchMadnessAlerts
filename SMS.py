@@ -25,7 +25,7 @@ def send(message):
             else:
                 # These are the phone numbers we text
                 to_number = line.split(":")[0]
-                to_number += carriers[line.split(":")[1]]
+                to_number += carriers[line.split(":")[1].replace('\n', '')]
                 server.sendmail(loginUser, to_number, message)
 # Example:
 #send("[Madness Notifier]\n(5)Michigan - 56\nvs\n(2)Michigan State - 59")
