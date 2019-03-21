@@ -22,13 +22,13 @@ while True:
                 print("Tracked index " + str(i) + ": ")
                 print("[Madness Notifier]\n(" + firstTeamSeed + ")" + firstTeamName + " - " + str(firstTeamScore)
                                      + "\nvs\n(" + secTeamSeed + ")" + secTeamName + " - " + str(secTeamScore)
-                                     + "\nwith " + str(minsLeft) + " mins to go")
+                                     + "\nwith " + str(minsLeft) + " mins to go in the " + half + " half")
+                alreadyPrinted.append(i)
                 print()
                 print(str(len(alreadyPrinted)) + " games have been tracked!")
                 print()
-                alreadyPrinted.append(i)
             if ("2" in half):
-                if (firstTeamScore - secTeamScore <= 8 and firstTeamScore > secTeamScore) or (secTeamScore - firstTeamScore <= 8 and secTeamScore > firstTeamScore):
+                if (firstTeamScore - secTeamScore <= 8 and firstTeamScore >= secTeamScore) or (secTeamScore - firstTeamScore <= 8 and secTeamScore >= firstTeamScore):
                     if (minsLeft <= 4):
                         if (i not in alreadyNotified):
                             # It is a game deemed worth watching, now we msg ourselves to let us know
@@ -44,7 +44,9 @@ while True:
         except Exception as e:
             continue
     sleep(20)  # Sleeps every 20 seconds
+    '''
     if startDate.day != datetime.datetime.now().day:
         startDate = datetime.datetime.now()
         alreadyNotified = list()
         alreadyPrinted = list()
+    '''
