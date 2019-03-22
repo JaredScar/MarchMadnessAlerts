@@ -44,9 +44,7 @@ while True:
         except Exception as e:
             continue
     sleep(20)  # Sleeps every 20 seconds
-    '''
     if startDate.day != datetime.datetime.now().day:
         startDate = datetime.datetime.now()
         alreadyNotified = list()
         alreadyPrinted = list()
-    '''
