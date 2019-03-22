@@ -18,19 +18,19 @@ while True:
             secTeamSeed = scraper.getSecondTeamSeed(i)
             secTeamScore = int(scraper.getSecondTeamScore(i))
             minsLeft = int(scraper.getTimeLeft(i).split(":")[0])
-            if i not in alreadyPrinted:
+            if firstTeamName + " vs. " + secTeamName not in alreadyPrinted:
                 print("Tracked index " + str(i) + ": ")
                 print("[Madness Notifier]\n(" + firstTeamSeed + ")" + firstTeamName + " - " + str(firstTeamScore)
                                      + "\nvs\n(" + secTeamSeed + ")" + secTeamName + " - " + str(secTeamScore)
                                      + "\nwith " + str(minsLeft) + " mins to go in the " + half + " half")
-                alreadyPrinted.append(i)
+                alreadyPrinted.append(firstTeamName + " vs. " + secTeamName)
                 print()
                 print(str(len(alreadyPrinted)) + " games have been tracked!")
                 print()
             if ("2" in half):
                 if (firstTeamScore - secTeamScore <= 8 and firstTeamScore >= secTeamScore) or (secTeamScore - firstTeamScore <= 8 and secTeamScore >= firstTeamScore):
                     if (minsLeft <= 4):
-                        if (i not in alreadyNotified):
+                        if (firstTeamName + " vs. " + secTeamName not in alreadyNotified):
                             # It is a game deemed worth watching, now we msg ourselves to let us know
                             print("Game is " + firstTeamName + " vs " + secTeamName)
                             print("Half is " + half)
@@ -40,7 +40,7 @@ while True:
                                      + "\nwith " + str(minsLeft) + " mins to go")
                             print("Message has been sent")
                             print()
-                            alreadyNotified.append(i)
+                            alreadyNotified.append(firstTeamName + " vs. " + secTeamName)
         except Exception as e:
             continue
     sleep(20)  # Sleeps every 20 seconds
